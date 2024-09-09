@@ -1,0 +1,23 @@
+#ifndef LAVABOMB_H
+#define LAVABOMB_H
+
+#include "Matrix4.h"
+#include "Random.h"
+
+class LavaBomb
+{
+public:
+  LavaBomb();
+  
+  void Update(float deltaTime, float gravity, Matrix4 r, Matrix4 t);
+
+  Cartesian3 direction;
+  Matrix4 matrix;
+
+  float minimumSpeed = 60.0f;
+  float maximumSpeed = 300.0f;
+  float mininumAngle = 45.0f;
+};
+
+#endif // LAVABOMB_H
+
